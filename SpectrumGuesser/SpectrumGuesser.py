@@ -2,8 +2,10 @@ import pandas as pd
 import os
 import matplotlib.pyplot as plt
 import random
+import pathlib
 
-data_dir = "." + os.sep + "stellar_spectra" + os.sep # get spectrum directory
+
+data_dir = str(pathlib.Path(__file__).parent.absolute()) + os.sep + "stellar_spectra" + os.sep # get spectrum directory
 
 def spectrum_draw_and_choose():
     spectrum = random.choice(os.listdir(data_dir))  # choose spectrum

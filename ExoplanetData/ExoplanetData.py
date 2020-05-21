@@ -8,8 +8,9 @@ import numpy as np
 import matplotlib.cm as cm
 from matplotlib.colors import Normalize
 from numpy import ma
+import pathlib
 
-data_dir = "." + os.sep + "data" + os.sep # find directory containing csv
+data_dir = str(pathlib.Path(__file__).parent.absolute()) + os.sep + "data" + os.sep # find directory containing csv
 filename = "ConfirmedPlanets.csv" # choose csv
 # print(data_dir + filename)
 df = pd.read_csv(data_dir + filename) #read_csv loads the file
