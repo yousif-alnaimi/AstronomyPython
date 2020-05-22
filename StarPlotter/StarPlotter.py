@@ -13,10 +13,12 @@ from matplotlib.colors import Normalize
 import sys
 import matplotlib.cbook as cbook
 import pandas as pd
+import pathlib
+import os
 
 def bright():
     results = []
-    with open("BrightestStars2.csv") as csvfile:
+    with open(str(pathlib.Path(__file__).parent.absolute()) + os.sep + "BrightestStars2.csv") as csvfile:
         reader = csv.reader(csvfile, quoting=csv.QUOTE_NONNUMERIC) # change contents to floats
         for column in reader: # each row is a list
             results.append(column)
@@ -46,7 +48,7 @@ def bright():
 
 def near():
     results = []
-    with open("NearestStars2.csv") as csvfile:
+    with open(str(pathlib.Path(__file__).parent.absolute()) + os.sep + "NearestStars2.csv") as csvfile:
         reader = csv.reader(csvfile, quoting=csv.QUOTE_NONNUMERIC)  # change contents to floats
         for column in reader:  # each row is a list
             results.append(column)
@@ -74,7 +76,7 @@ def near():
 
 def mixed():
     results = []
-    with open("MixedStars2.csv") as csvfile:
+    with open(str(pathlib.Path(__file__).parent.absolute()) + os.sep + "MixedStars2.csv") as csvfile:
         reader = csv.reader(csvfile, quoting=csv.QUOTE_NONNUMERIC)  # change contents to floats
         for column in reader:  # each row is a list
             results.append(column)
