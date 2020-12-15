@@ -85,7 +85,7 @@ lgnd = plt.legend(scatterpoints=1, frameon=True, labelspacing=1, title='Point Co
                   #                  , loc = "center right", bbox_to_anchor=(0.15, 0.5) # change location of legend, commented = default
                   )  # draw legends
 for i in range(12):
-    lgnd.legendHandles[i]._sizes = [80]  # apply sizes to dots
+    lgnd.legendHandles[i]._sizes = [80]  # apply sizes to dots in the legend
     lgnd.legendHandles[i].set_alpha(0.5)  # set transparency of legend points(would be barely visible otherwise)
     if i == 11:
         lgnd.legendHandles[11].set_color("#222222")
