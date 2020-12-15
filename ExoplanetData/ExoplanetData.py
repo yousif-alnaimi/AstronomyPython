@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 import numpy as np
 import matplotlib.cm as cm
-from matplotlib.colors import Normalize
 import pathlib
 
 data_dir = str(pathlib.Path(__file__).parent.absolute()) + os.sep + "data" + os.sep  # find directory containing csv
