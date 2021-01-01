@@ -28,9 +28,7 @@ def bright():
     area_list = [item[0] for item in results] # apparent magnitude column
     color_list = [(item **2)**(1/8)*np.sign(item)*-1 for item in area_list] # adjusting values to suitable colours
     area_list_big = [((item * 5)**2) for item in area_list] # adjusting values to suitable areas
-    x = x_list
-    y = y_list
-    area = area_list_big
+    x,y,area = x_list,y_list,area_list_big
     norm = mpl.colors.Normalize(vmin=-1.5, vmax=2.8) # setting normalisation boundaries on the colour map
     cmap = cm.hot # choosing colourmap
     m = cm.ScalarMappable(norm=norm, cmap=cmap)
@@ -57,9 +55,7 @@ def near():
     area_list = [item[0] for item in results] # distance column (lightyears)
     color_list = [(item) for item in x_list]
     area_list_big = [(50/(item**(1/3))) for item in area_list]
-    x = x_list
-    y = y_list
-    area = area_list_big
+    x,y,area = x_list,y_list,area_list_big
     norm = mpl.colors.Normalize(vmin=0, vmax=70)
     cmap = cm.jet # blue to red
     m = cm.ScalarMappable(norm=norm, cmap=cmap)
@@ -85,9 +81,7 @@ def mixed():
     area_list = [item[2] for item in results] # distance column (parsecs)
     color_list = [(item) for item in x_list]
     area_list_big = [(100/(item**0.75)) for item in area_list]
-    x = x_list
-    y = y_list
-    area = area_list_big
+    x,y,area = x_list,y_list,area_list_big
     norm = mpl.colors.Normalize(vmin=0, vmax=70)
     cmap = cm.jet # blue to red
     m = cm.ScalarMappable(norm=norm, cmap=cmap)
